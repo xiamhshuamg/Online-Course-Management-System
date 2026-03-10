@@ -1,0 +1,185 @@
+/* 全局基础变量：减少“纯白发亮”，整体更耐看（偏中性灰） */
+:root {
+  /* Element Plus 主题变量（让组件不刺眼） */
+  --el-color-primary: var(--primary);
+  --el-border-radius-base: 12px;
+  --el-box-shadow-light: 0 8px 22px rgba(17, 24, 39, 0.10);
+  --el-bg-color: rgba(255, 255, 255, 0.90);
+  --el-bg-color-overlay: rgba(255, 255, 255, 0.92);
+  --el-fill-color-blank: rgba(255, 255, 255, 0.80);
+  --el-border-color: rgba(17, 24, 39, 0.10);
+  --el-text-color-primary: #111827;
+  --el-text-color-regular: rgba(17, 24, 39, 0.72);
+
+  /* 主色调 */
+  --primary: #4f46e5;
+  --primary-light: #818cf8;
+  --primary-dark: #3730a3;
+
+  /* 背景 */
+  --bg: #f3f4f6;
+  --bg-secondary: #eef2ff;
+
+  /* 卡片 */
+  --card: rgba(255, 255, 255, 0.85);
+
+  /* 字体颜色 */
+  --text-primary: #111827;
+  --text-secondary: rgba(17, 24, 39, 0.72);
+  --muted: rgba(17, 24, 39, 0.55);
+
+  /* 边框颜色 */
+  --border-light: #f3f4f6;
+  --border-default: #e5e7eb;
+  --border-dark: #d1d5db;
+
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+
+  /* 阴影 */
+  --shadow: 0 10px 28px rgba(17, 24, 39, 0.10);
+  --shadow-sm: 0 6px 18px rgba(17, 24, 39, 0.08);
+
+  /* 动画 */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;/*统一盒模型,宽高包含 padding 和 border*/
+}
+
+html {
+  height: 100%;
+  font-size: 15px;
+  scroll-behavior: smooth;/*平滑滚动*/
+}
+
+body {
+  margin: 0;/*去掉浏览器默认外边距。*/
+  min-height: 100%;
+  font-family:
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          sans-serif;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+  line-height: 1.5;/*行高*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*字体抗锯齿*/
+}
+
+a {
+  color: inherit;/*链接不强制变蓝*/
+}
+
+
+.table-container {
+  background: var(--card);
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+/* 兼容：有些页面用 .card 包着表格 */
+.card {
+  width: 100%;
+}
+
+.table,
+.data-table {
+  width: 100%;
+  border-collapse: collapse;/*合并边框*/
+  background: transparent;/*背景透明*/
+}
+
+.table th,
+.table td,
+.data-table th,
+.data-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.06);
+  font-size: 14px;
+  color: var(--text-primary);
+  vertical-align: middle;/*单元格内容垂直居中*/
+}
+
+.table thead th,
+.data-table thead th {
+  background: rgba(248, 250, 252, 0.70);
+  color: rgba(17, 24, 39, 0.72);
+  font-size: 13px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.table tbody tr:hover,
+.data-table tbody tr:hover {
+  background: rgba(79, 70, 229, 0.05);
+}
+
+.table tbody tr:last-child td,
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.font-medium {
+  font-weight: 600;
+}
+
+.mono {
+  font-family:
+          ui-monospace,
+          SFMono-Regular,
+          Menlo,
+          Monaco,
+          Consolas,
+          "Liberation Mono",
+          "Courier New",
+          monospace;
+}
+
+.muted {
+  color: var(--muted);
+}
+:root {
+  /*  Element Plus 基础尺寸与字体 */
+  --el-font-size-base: 11px;
+  --el-font-size-small: 12px;
+
+  /* 组件高度（按钮/输入框更矮一点） */
+  --el-component-size: 32px;
+
+  /* 圆角更小一点 */
+  --el-border-radius-base: 10px;
+  --el-border-radius-small: 8px;
+
+  /* Card 内边距更小 */
+  --el-card-padding: 14px;
+}
+
+/* 全局盒模型，避免 padding 把块撑得太大 */
+* {
+  box-sizing: border-box;
+}
+
+/*页面默认字体稍微收一点 */
+html {
+  font-size: 15px;
+}
+
+body {
+  margin: 0;
+}
+
